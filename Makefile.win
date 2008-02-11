@@ -1,0 +1,30 @@
+# Project: CPTInfo
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = cptinfo.o $(RES)
+LINKOBJ  = cptinfo.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" ../../../Dev-Cpp/lib/glib-2.0.lib  
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/lib/glib-2.0/include"  -I"C:/Dev-Cpp/include/glib-2.0" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/lib/glib-2.0/include"  -I"C:/Dev-Cpp/include/glib-2.0" 
+BIN  = CPTInfo.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before CPTInfo.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "CPTInfo.exe" $(LIBS)
+
+cptinfo.o: cptinfo.c
+	$(CC) -c cptinfo.c -o cptinfo.o $(CFLAGS)
