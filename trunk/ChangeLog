@@ -1,0 +1,57 @@
+0.039 - put on Google Code Hosting, fixed minor bug, LGPL license
+0.038 - separate error messages for corrupt and not CPT file
+0.037 - added (naive) creator application version detection.
+0.036 - changed version detection code and flag handling, now more CPT-like
+0.035 - 'oinf' partial decoding, small bugfixes
+0.034 - fixed bug with incorrectly displaying '[!]' in normal output mode for
+        .cpt files created by CPT9. Decoding chunks: 'pthw' (full), 'bnam'
+        (full), 'bnwm' (full), 'path' (partial).
+0.033 - 'grid' decoding improved: grid values.
+0.032 - start of chunk processing. Partial 'grid' decoding: measure unit.
+        Use -v in normal mode to display.
+0.031 - replaced almost all printf()s with ci_msg() at appropriate level. Code
+        simplified a bit; new option -sh, -s output improved a bit.
+0.030 - fixed memory violation bugs when performing additional checks.
+0.029 - print first uint32_t value at given data offset; data offset table now
+        iterated in more proper (hope so) way
+0.028 - object embedded palette detection (very experimental). -v option now
+        outputs chunk names and data offset table in -s mode, minor fixes
+0.027 - minor fixes and changes, make -od option work without -oc (however,
+        chunk search / testing is performed anyway)
+0.026 - too tired to document... zZzZ
+0.025 - more intelligent chunk search, some checks based on guesses, more info
+        on output...
+0.024 - short output of block & chunk information with -s mode; spaces within
+        filename in -s mode are replaced with '_' char for easier script parsing;
+0.023 - Win32 version, console output locale fixes, langinfo.h dependancy removed.
+0.022 - option -oc works now, help text update, minor display bug fixed
+0.021 - option -ob removed, new -br <n|n-m> option (allows to specify block range),
+        block information output, -v option for more verbosity
+0.020 - -db option implemented, dumping to directory in . with name basename.blocks
+0.019 - calculation of addresses now hopefully correct, implemented
+        recognition of internal ICC type used
+0.018 - palette and ICC profile dumping implemented, -op option removed in
+        favour of -dp and hexdump
+0.017 - set max size of comment strings (bot a&w versions)
+0.016 - option -c <charset> added; fixed bug appearing when g_convert() fails
+0.015 - fixed possible bug with realloc() with help of Valgrind, wide
+        comment now printed
+0.014 - change iconv.h stuff to glib.h functions, show ANSI comment,
+        show ICC profile information if present
+0.013 - show if there's embedded comment and/or ICC profile
+0.012 - fixed bug with ydpi calculation, fixed bug with color number,
+        color number output by default
+0.011 - program code rewrite, changed naming convention in cpt.h,
+        split cpt.h into cpt.h + cpt6.h; short mode output changed, verbose
+        mode output changed, program arguments more fluid, faster parsing,
+        more erroronous and unusual situations detected, handle CPT7 files
+        created by PP9, some functionality still missing though.
+0.010 - tabelarized color models, chunk dword dump
+0.009 - -df option, chunks search disabled by default
+0.008 - fixed bug with color table not dumping when colors==256
+0.007 - new option -sp, show resolutions of both CPT7 and CPT9
+0.006 - cpt.h: image header struct, display some iheader info
+0.005 - complete rewrite of code, cpt.h file created, CPT 6.0 detection
+0.004 - command line options changed, fixed damn strncat bug, atexit func
+0.003 - base version
+
